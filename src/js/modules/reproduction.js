@@ -22,7 +22,7 @@ function reproduction() {
                 hideActiveTabs(tab, 'reproduction__tab_active')
                 if(tab == e.target) {
                     showActiveTab(i)
-                }
+                } 
             })
             
         }
