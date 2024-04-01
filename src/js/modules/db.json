@@ -1,0 +1,151 @@
+{
+    "cards": [
+        {    
+        "id" : "#france",
+        "src" : "img/catalog/paintings_france_1.jpg",
+        "alt" : "paintings",
+        "author" : "Марсель Руссо",
+        "name" : "Охота Амура",
+        "descr" :"Холст, масло (50х80)",
+        "price" :"14 500 руб"
+        },
+        { 
+            "id" : "#france",
+            "src" : "img/catalog/paintings_france_2.jpg",
+            "alt" : "paintings",
+            "author" : "Анри Селин",
+            "name" : "Дама с собачкой",
+            "descr" :"Акрил, бумага (50х80)",
+            "price" :"16 500 руб"
+        },{
+            "id" : "#france",
+            "src" : "img/catalog/paintings_france_3.jpg",
+            "alt" : "paintings",
+            "author" : "Франсуа Дюпон",
+            "name" : "Процедура",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"20 000 руб"
+        },{
+            "id" : "#france",
+            "src" : "img/catalog/paintings_france_4.jpg",
+            "alt" : "paintings",
+            "author" : "Луи Детуш",
+            "name" : "Роза",
+            "descr" :"Бумага, акрил (50х80)",
+            "price" :"12 000 руб"
+        },{
+            "id" : "#france",
+            "src" : "img/catalog/paintings_france_5.jpg",
+            "alt" : "paintings",
+            "author" : "Франсуа Дюпон",
+            "name" : "Птичья трапеза",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"22 500 руб"
+        },{
+            "id" : "#france",
+            "src" : "img/catalog/paintings_france_6.jpg",
+            "alt" : "paintings",
+            "author" : "Пьер Моранж",
+            "name" : "Пейзаж с рыбой",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"20 000 руб"
+        },{
+            "id" : "#germany",
+            "src" : "img/catalog/paintings_germany_1.jpg",
+            "alt" : "paintings",
+            "author" : "Курт Вернер",
+            "name" : "Над городом",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"16 000 руб"
+        },{
+            "id" : "#germany",
+            "src" : "img/catalog/paintings_germany_2.jpg",
+            "alt" : "paintings",
+            "author" : "Макс Рихтер",
+            "name" : "Птенцы",
+            "descr" :"Холст, масло (50х80)",
+            "price" :"14 500 руб"
+        },{
+            "id" : "#germany",
+            "src" : "img/catalog/paintings_germany_3.jpg",
+            "alt" : "paintings",
+            "author" : "Мартин Майер",
+            "name" : "Среди листьев",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"20 000 руб"
+        },{
+            "id" : "#germany",
+            "src" : "img/catalog/paintings_germany_4.jpg",
+            "alt" : "paintings",
+            "author" : "Герман Беккер",
+            "name" : "Яркая птица",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"13 000 руб"
+        },{
+            "id" : "#germany",
+            "src" : "img/catalog/paintings_germany_5.jpg",
+            "alt" : "paintings",
+            "author" : "Вульф Бауэр",
+            "name" : "Дятлы",
+            "descr" :"Бумага, акрил (50х80)",
+            "price" :"20 000 руб"
+        },{
+            "id" : "#germany",
+            "src" : "img/catalog/paintings_germany_6.jpg",
+            "alt" : "paintings",
+            "author" : "Вальтер Хартманн",
+            "name" : "Большие воды",
+            "descr" :"Бумага, акрил (50х80)",
+            "price" :"23 000 руб"
+        },{
+            "id" : "#england",
+            "src" : "img/catalog/paintings_england_1.jpg",
+            "alt" : "paintings",
+            "author" : "Пол Смит",
+            "name" : "Дикий зверь",
+            "descr" :"Акварель, бумага (50х80)",
+            "price" :"19 500 руб"
+        },{
+            "id" : "#england",
+            "src" : "img/catalog/paintings_england_2.jpg",
+            "alt" : "paintings",
+            "author" : "Джон Уайт",
+            "name" : "Скалистый берег",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"17 500 руб"
+        },{
+            "id" : "#england",
+            "src" : "img/catalog/paintings_england_3.jpg",
+            "alt" : "paintings",
+            "author" : "Джим Уотсон",
+            "name" : "Река и горы",
+            "descr" :"Акварель, бумага (50х80)",
+            "price" :"20 500 руб"
+        },{
+            "id" : "#england",
+            "src" : "img/catalog/paintings_england_4.jpg",
+            "alt" : "paintings",
+            "author" : "Юджин Зиллион",
+            "name" : "Белый попугай",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"15 500 руб"
+        },{
+            "id" : "#england",
+            "src" : "img/catalog/paintings_england_5.jpg",
+            "alt" : "paintings",
+            "author" : "Эрик Гиллман",
+            "name" : "Ночная рыба",
+            "descr" :"Бумага, акрил (50х80)",
+            "price" :"12 500 руб"
+        },{
+            "id" : "#england",
+            "src" : "img/catalog/paintings_england_6.jpg",
+            "alt" : "paintings",
+            "author" : "Альфред Барр",
+            "name" : "Рыжий кот",
+            "descr" :"Цветная литография (40х60)",
+            "price" :"21 000 руб"
+        }
+    
+    ]
+}

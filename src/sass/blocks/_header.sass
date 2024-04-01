@@ -1,0 +1,39 @@
+.header
+    min-height: 100px
+    padding: 33px 0 32px 0
+    background-color: $main_background
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__shopping
+        width: 25px
+        cursor: pointer
+        transition: color 500ms ease
+        path
+            &:hover, .active
+                fill:#376B44
+
+    
+    // &__nav
+    &__list
+        display: flex
+        align-items: center
+        margin: 0
+        height: 100%
+        li
+            margin-left: 60px
+            list-style-type: none
+            color: #2C2D35
+            line-height: normal
+            a
+                text-decoration: none
+                color: #2C2D35
+                &:hover
+                    color: $main_hov
+                &:active
+                    background-color: $main_foc
+                    color: #2C2D35
+                &:focus
+                    color: $main_act
+
+            
