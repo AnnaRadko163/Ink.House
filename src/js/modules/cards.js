@@ -15,13 +15,13 @@ function cards() {
     }
     render() {
       document.querySelector(this.id).innerHTML += `
-            <div id="${this.key}" class="reproduction-item">
-                <img src=${this.src} alt="${this.alt}" class="reproduction-item__img">
-                <div class="reproduction-item__author">${this.author}</div>
-                <div class="reproduction-item__name">${this.name}</div>
-                <div class="reproduction-item__descr">${this.descr} </div>
-                <div class="reproduction-item__price">${this.price}</div>
-                    <button class="btn btn_mini">В корзину</button>
+            <div data-id="${this.key}" class="product">
+                <img src=${this.src} alt="${this.alt}" class="product__img">
+                <div class="product__author">${this.author}</div>
+                <div class="product__name">${this.name}</div>
+                <div class="product__descr">${this.descr} </div>
+                <div class="product__price">${this.price} руб</div>
+                  <button class="btn btn_mini  btn_products">В корзину</button>
                     
             </div>`;
     }
