@@ -1,17 +1,12 @@
 function shopping() {
   const productsBtn = document.querySelectorAll(".btn_products"),
     shop = document.querySelector(".header__shopping"),
-    blockWithShop = document.querySelector(".product__shop-cart"),
-    fullPrice = document.querySelector(".product-cart__fullPrice"),
+    blockWithShop = document.querySelector(".product-cart_list"),
+    fullPrice = document.querySelector(".product-cart__block-price__fullPrice"),
     plusProduct = document.querySelectorAll(".plus"),
-    minusProduct = document.querySelectorAll(".minus");
-
+    minusProduct = document.querySelectorAll(".minus"),
+    shopFull = document.querySelector('.header__shopping__full')
   let price = 0;
-
-  shop.addEventListener("click", (e) => {
-    shop.classList.toggle("active");
-    blockWithShop.classList.toggle("none");
-  });
 
   function priceWithoutSpaces (str) {
     return str.replace(/\s/g, "");
@@ -30,11 +25,12 @@ function shopping() {
 
   function printFullPrice () {
     fullPrice.textContent = `${normalPrice(price)} рублей`;
+    if (price < 1 ){
+      document.querySelector(".product__shop-cart__no").classList.remove('none')
+      document.querySelector(".product-cart__block-price").classList.add('none')
+    }
+
   };
-
-  
-
-
 
   function generateCartProduct (img,  name, descr, price, id, quantity) {
     return `
@@ -58,6 +54,10 @@ function shopping() {
   function increasingQuantityProduct (productParent) {
     let id = productParent.dataset.id 
     let parent = document.querySelectorAll(`[data-id='${id}']`)
+    plusFullPrice(parseInt(
+      priceWithoutSpaces(document.querySelector(`[data-id='${id}']`).querySelector(".product-cart__price").textContent)
+    ))
+    printFullPrice();
     parent.forEach((e) => {
       let quantity = +e.dataset.quantity
       quantity += 1
@@ -68,38 +68,56 @@ function shopping() {
 
   function reducingQuantityProduct (productParent) {
     let id = productParent.dataset.id 
-
     if(+(document.querySelector(`[data-id='${id}']`)).dataset.quantity < 2) {
        deleteProducts(document.querySelector(`[data-id='${id}']`))
     } else {
+      minusFullPrice(parseInt(
+      priceWithoutSpaces(document.querySelector(`[data-id='${id}']`).querySelector(".product-cart__price").textContent)
+    ))
+    printFullPrice();
     let parents = document.querySelectorAll(`[data-id='${id}']`)
-    console.log(parents)
     parents.forEach((e) => {
       let quantity = +e.dataset.quantity
       quantity -= 1
       e.dataset.quantity = quantity
       e.querySelector('.product__change__number').textContent = quantity}
     )}
-
-
-    
-    console.log(productParent)
   }
   function deleteProducts (productParent) {
 
     let id = productParent.dataset.id 
+    let quantity = +document.querySelector(`[data-id='${id}']`).dataset.quantity
+    let parent = document.querySelectorAll(`[data-id='${id}']`)
+    parent.forEach((e) => {
+      e.dataset.quantity = 1
+      e.querySelector('.product__change__number').textContent = 1
+    })
+    
     document
       .querySelector(`.product[data-id='${id}']`)
       .querySelector(".btn_products").classList.remove('none')
+    document
+      .querySelector(`.product[data-id='${id}']`).querySelector('.product__change').classList.add('none')
+      console.log(quantity)
     let currentPrice = parseInt(
       priceWithoutSpaces(
         productParent.querySelector(".product-cart__price").textContent
-      )
+      ) 
     );
-    minusFullPrice(currentPrice);
+
+    minusFullPrice((quantity*currentPrice));
     printFullPrice();
     productParent.remove();
   };
+
+  shop.addEventListener("click", (e) => {
+    shop.classList.toggle("active");
+    document.querySelector('.product__shop-cart').classList.toggle("none");
+    if (price > 0) {
+      shopFull.classList.toggle("none")
+    }
+    
+  });
 
   productsBtn.forEach((el) => {
     el.addEventListener("click", (e) => {
@@ -109,18 +127,21 @@ function shopping() {
       parent.dataset.quantity = 1
       let quantity = parent.dataset.quantity 
       let img = parent.querySelector(".product__img").getAttribute("src");
-      let author = parent.querySelector(".product__author").textContent;
       let name = parent.querySelector(".product__name").textContent;
       let descr = parent.querySelector(".product__descr").textContent;
       let price = parseInt(
         priceWithoutSpaces(parent.querySelector(".product__price").textContent)
       );
+      document.querySelector(".product__shop-cart__no").classList.add('none')
+      document.querySelector(".product-cart__block-price").classList.remove('none')
+      shopFull.classList.remove("none")
       plusFullPrice(price);
       printFullPrice();
       blockWithShop.insertAdjacentHTML(
         "afterbegin",
         generateCartProduct(img,  name, descr, price, id, quantity )
       );
+      parent.querySelector('.product__change').classList.remove("none")
 
       self.classList.add('none');
 
@@ -151,11 +172,6 @@ function shopping() {
       reducingQuantityProduct(e.target.closest("[data-id]"));
     })
   })
-
-
-
-
-
 }
 
 export default shopping;

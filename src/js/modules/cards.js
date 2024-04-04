@@ -22,7 +22,7 @@ function cards() {
                 <div class="product__descr">${this.descr} </div>
                 <div class="product__price">${this.price} руб</div>
                   <button class="btn btn_mini  btn_products ">В корзину</button>
-                  <div class="product__change">
+                  <div class="product__change none ">
                     <button class="btn btn_change minus">-</button> 
                     <div class="product__change__number">1</div>
                     <button class="btn btn_change plus">+</button>               

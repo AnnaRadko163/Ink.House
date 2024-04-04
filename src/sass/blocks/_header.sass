@@ -1,22 +1,35 @@
 .header
-    position: relative
-    min-height: 100px
+    position: sticky
+    top: 0
+    z-index: 2
+   
     
     background-color: $main_background
     .container
         height: 100px
     &__wrapper
+        position: relative
         height: 100%
         margin:  auto 0
         display: flex
         justify-content: space-between
     &__shopping
+        position: relative
         width: 25px
         cursor: pointer
         transition: color, transform 500ms ease
         &:hover
             transform: scale(1.5)
             fill:#376B44
+        &__full
+            position: absolute
+            right: 0
+            top: 33%
+            border-radius: 50%
+            width: 10px
+            height: 10px
+            background: #376B44
+
     .active
         fill:#376B44
         transform: scale(1.5)
@@ -44,5 +57,7 @@
                     color: #2C2D35
                 &:focus
                     color: $main_act
+none
+    display: none
 
             
