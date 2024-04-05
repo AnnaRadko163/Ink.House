@@ -134,7 +134,10 @@ function shopping() {
       );
       document.querySelector(".product__shop-cart__no").classList.add('none')
       document.querySelector(".product-cart__block-price").classList.remove('none')
-      shopFull.classList.remove("none")
+      if (!(shop.classList.contains ("active"))){
+        shopFull.classList.remove("none")
+      }
+      
       plusFullPrice(price);
       printFullPrice();
       blockWithShop.insertAdjacentHTML(
