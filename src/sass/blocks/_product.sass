@@ -1,14 +1,16 @@
 .product
+    display: flex
+    flex-direction: column
     position: relative
     background-color: $main_background
     padding: 20px
     padding-bottom: 30px
 
+
     img
         display: block
-        max-width: 310px
-        max-height: 422px
-        margin: auto
+        width: 100%
+
     &__author
         margin-top: 20px
         color: #86928B
@@ -23,21 +25,19 @@
         max-width: 310px
     &__descr
         margin-top: 8px
+        margin-bottom: 150px
         color: #2C2D35
         font-size: 18px
         line-height: normal
         max-width: 310px
     &__price
-        margin-top: 30px
-        margin-bottom: 85px
+        position: absolute
+        bottom: 100px
         color: $main_hov
         font-size: 24px
         line-height: normal
-        max-width: 310px
-    .btn_mini
-        position: absolute
-        left: 20px
-        bottom: 30px
+
+    
     
     &__shop-cart
         position: absolute
@@ -56,9 +56,14 @@
         display: flex
         align-items: center
         justify-content: center
+
         
         &__number
             font-size: 24px
             margin: 0 15px
+        &_max
+            position: absolute
+            bottom: 16px
+            left: 25%
 .none
     display: none
