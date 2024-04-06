@@ -16,7 +16,8 @@ function cards() {
     render() {
       document.querySelector(this.id).innerHTML += `
             <div data-id="${this.key}" class="product">
-                <img src=${this.src} alt="${this.alt}" class="product__img">
+              <img src=${this.src} alt="${this.alt}" class="product__img">
+              <div class="product__wrapper">
                 <div class="product__author">${this.author}</div>
                 <div class="product__name">${this.name}</div>
                 <div class="product__descr">${this.descr} </div>
@@ -27,6 +28,7 @@ function cards() {
                     <div class="product__change__number">1</div>
                     <button class="btn btn_change plus">+</button>               
                   </div>
+              </div>
             </div>`;
     }
   }

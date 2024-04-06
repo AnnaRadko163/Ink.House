@@ -64,6 +64,14 @@
             margin-top: 15px
             margin-bottom: 45px
             gap: 20px 20px
+    .team
+        &__picture 
+            img 
+                width: 100%
+                height: 100%
+        &__picture 
+            width: 150%
+            height: auto
 
 @media (max-width:770px)
     .container
@@ -93,7 +101,7 @@
                 font-size: 18px
     .reproduction
         &__content 
-            grid-template-columns: repeat(2, 50%)
+            grid-template-columns: repeat(2, 48%)
     .product img 
         width: 55%
     .acquainted 
@@ -104,20 +112,242 @@
             margin-bottom: 40px
             font-size: 16px
             line-height: 140%
+    
+    .footer__tabs 
+        display: none
 
+@media (max-width:615px)
+    .logo img 
+        max-height: 32px
+        max-width: 100px
+    ul 
+        padding-left: 0rem
+        margin-bottom: 0rem
+    .header
+        &__list 
+            li 
+                margin-left: 19px
+                a 
+                    font-size: 14px
+        &__shopping 
+            width: 20px
+            &:hover 
+                transform: scale(1.3)
+    .promo
+        &__header 
+            font-size: 26px
+        &__subheader 
+            font-size: 12px
+        &__img 
+            max-width: 45%
 
+    .btn 
+        height: 38px
+        width: 130px
+        font-size: 16px
+        &_mini 
+            width: 85%
+        &_change 
+            width: 35px
+            height: 35px
+            font-size: 26px
+            &_mini 
+                width: 25px
+                height: 25px
+                font-size: 18px
+        &_yellow
+            font-size: 14px
+        &_price    
+            font-size: 10px
 
+    .product
+        &__author 
+            margin-top: 10px
+            font-size: 16px
+            max-width: 200px
+        &__name 
+            margin-top: 3px
+            font-size: 22px
+            max-width: 200px
+        &__descr 
+            margin-top: 8px
+            font-size: 16px
+            max-width: 200px
+            margin-bottom: 75px
+        &__price 
+            bottom: 60px
+    .reproduction
+        &__title 
+            font-size: 24px
+        &__tab 
+            margin-left: 5px
+            padding: 3px 10px
+            font-size: 14px
+    .acquainted
+        min-height: 340px
+        &__star-img 
+            max-width: 40px
+        &__header 
+            font-size: 24px
+        &__descr 
+            margin-bottom: 25px
+            font-size: 13px
+            line-height: 120%
+        &__wrapper 
+            padding: 30px 20vw 30px 0
+    .reproduction
+        &__title 
+            margin-left: 5px
+        &__head 
+            display: flex
+            flex-direction: column
+    .team
+        &__frame 
+            padding: 0px 0px 20px 30px
+        &__picture 
+            width: 250%
+        &__header 
+            font-size: 28px
+        &__descr 
+            margin-top: 0px
+            font-size: 12px
+            line-height: 130%
+        &__photos 
+            margin-top: 5px
+            img 
+                margin-right: 8px
+                width: 45px
+                height: 44px
+    .modal
+        &__title 
+            font-size: 18px
+        &__input 
+            margin: 10px auto 20px auto
+            width: 227px
+            height: 40px
+            font-size: 15px
+        .btn 
+            width: 227px
 
+    .footer
+        &__icon 
+            margin-left: 7px
+        &__credits 
+            margin-left: 10px
 
-   
+@media (max-width:460px)
+    
+    .header
+        &__list li 
+            margin-left: 7px
+            a
+                font-size: 12px
+        
+        
+    .promo
+        &__subheader 
+            margin-bottom: 10px
+            font-size: 10px
+        &__header 
+            font-size: 18px
+    .btn 
+        height: 26px
+        width: 90px
+        font-size: 12px
+        &_mini 
+            width: 85%
+        &_change 
+            width: 28px
+            height: 28px
+            font-size: 18px
+            &_mini 
+                width: 25px
+                height: 25px
+                font-size: 18px
+        &_yellow
+            font-size: 10px
+        &_price    
+            font-size: 10px
+            height: 36px
+            width: 100px
+    .reproduction
+        &__title 
+            font-size: 18px
+        &__title 
+            font-size: 18px
+    .product
+        &__author 
+            font-size: 12px
+        &__name 
+            font-size: 18px
+        &__descr 
+            font-size: 12px
+            margin-bottom: 45px
+        &__price 
+            font-size: 16px
+            bottom: 47px
+    .acquainted
+        min-height: 280px
+        &__header 
+            font-size: 18px
+        &__descr 
+            margin-bottom: 16px
+            font-size: 12px
+            line-height: 110%
 
+@media (max-width:380px)
+    .header
+        &__list li a
+            display: none
+    .reproduction__content 
+        grid-template-columns: repeat(1, 99%)
+    .product 
+        flex-direction: row
+        padding-bottom: 20px
+        img 
+            width: 35%
+            margin: 0 auto 0 0
+        &__wrapper
+            width: 58%
+        &__descr 
+            margin-bottom: 65px
+        .btn_mini 
+            bottom: 20px
+        &__price 
+            bottom: 55px
+        &__change_max 
+            left: auto
+        &__shop-cart 
+            width: 270px
+    .product-cart
+        &_list 
+            max-height: 60vh
+        img 
+            width: 60px
+        &__wrapper 
+            width: 154px
 
+    .team
+        &__picture 
+            display: none
+        &__frame 
+            padding: 0
 
+    .btn_mini 
+        left: auto
+        width: 35%
+
+    .acquainted__header 
+        font-size: 15px
+        
         
 
+    
 
 
 
+
+    
+    
 
         
-   
